@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efedd6;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: steelblue;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Make the content of the box vertical */
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Adjust the width as needed */
+  margin: 10px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  border-radius: 10px; /* Optional: add some rounded corners to the image */
+}
+
+.box h2 {
+  margin: 16px 0 0; /* Space between title and image */
+  font-size: 24px;
+}
